@@ -1,6 +1,7 @@
 ﻿using Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Bal
@@ -51,6 +52,46 @@ namespace Bal
 
             respone.salida = dataTemp;
             return Task.FromResult(respone);
+        }
+
+
+        public Task<List<int>> calcuate2(RequestP2 request)
+        {
+            List<int> lstResponse = new List<int>();
+            List<int> lstPaquetes = request.lstPaquetes;
+
+            int espacioLibre = request.tamanioCamion - 30;
+            var mayorpaquete = lstPaquetes.Max(x => x);
+            List<string> pares = new List<string>();
+           
+
+            //  lstResponse.Add(mayorpaquete);
+
+            for (int i = 0; i < lstPaquetes.Count; i++)
+            {
+                for (int a = 0; a < lstPaquetes.Count; a++)
+                {
+                    if (a != i)
+                        pares.Add(lstPaquetes[i] + "," + lstPaquetes[a]);
+                }
+            }
+
+
+            foreach (var item in pares)
+            {
+                if (lstResponse.Count > 1)
+                    break;
+                if ((Convert.ToInt32(item.Split(",")[0]) + Convert.ToInt32(item.Split(",")[1])) < espacioLibre)
+                {
+                    lstResponse.Add(Convert.ToInt32(item.Split(",")[0]));
+                    lstResponse.Add(Convert.ToInt32(item.Split(",")[1]));
+                }
+                //if ((item + mayorpaquete) < espacioLibre)
+                //{
+                //    lstResponse.Add(item);
+                //}
+            }
+            return Task.FromResult(lstResponse);
         }
     }
 }

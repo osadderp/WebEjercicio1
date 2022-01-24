@@ -1,0 +1,56 @@
+﻿using Models;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace Bal
+{
+    public class Bal
+    {
+
+        public Task<Respone> calcuate(Request request)
+        {
+            Respone respone = new Respone();
+
+            respone.entrada = request.lstCasas;
+            respone.dias = request.dias;
+
+            List<int> data = new List<int>();
+            List<int> dataTemp = new List<int>();
+
+            dataTemp.AddRange(request.lstCasas);
+
+
+
+
+            for (int i = 0; i < request.dias; i++)
+            {
+                if (dataTemp[1] == 0)
+                    data.Add(0);
+                else
+                    data.Add(1);
+
+                for (int a = 1; a < dataTemp.Count - 1; a++)
+                {
+                    if (dataTemp[a - 1] == dataTemp[a + 1])
+                        data.Add(0);
+                    else
+                        data.Add(1);
+                }
+
+                if (dataTemp[dataTemp.Count - 2] == 0)
+                    data.Add(0);
+                else
+                    data.Add(1);
+
+                dataTemp.Clear();
+                dataTemp.AddRange(data);
+                data.Clear();
+
+            }
+
+            respone.salida = dataTemp;
+            return Task.FromResult(respone);
+        }
+    }
+}

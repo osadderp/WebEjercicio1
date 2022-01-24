@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiEjercicio1", "WebApiEjercicio1\WebApiEjercicio1.csproj", "{BA6D0D13-AE03-4046-991A-B45BD8E26EFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bal", "Bal\Bal.csproj", "{19F9DDF7-AD18-401F-A0E1-DE5F2432003E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{73C45886-BEBE-45A5-93FD-3071F1E3A01C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA6D0D13-AE03-4046-991A-B45BD8E26EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA6D0D13-AE03-4046-991A-B45BD8E26EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA6D0D13-AE03-4046-991A-B45BD8E26EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA6D0D13-AE03-4046-991A-B45BD8E26EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F9DDF7-AD18-401F-A0E1-DE5F2432003E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F9DDF7-AD18-401F-A0E1-DE5F2432003E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F9DDF7-AD18-401F-A0E1-DE5F2432003E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F9DDF7-AD18-401F-A0E1-DE5F2432003E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C45886-BEBE-45A5-93FD-3071F1E3A01C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C45886-BEBE-45A5-93FD-3071F1E3A01C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C45886-BEBE-45A5-93FD-3071F1E3A01C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C45886-BEBE-45A5-93FD-3071F1E3A01C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7044E72-E23C-446C-BBD4-A1AE057902A6}
+	EndGlobalSection
+EndGlobal
